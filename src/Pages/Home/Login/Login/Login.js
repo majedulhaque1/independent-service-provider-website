@@ -1,13 +1,31 @@
-import React from 'react';
-
+import React, { useRef } from 'react';
+import './Login.css';
+import { Link } from 'react-router-dom';
 const Login = () => {
+    const refName = useRef('');
+    const refEmail = useRef('');
+    const refPassword = useRef('');
+    const refConfirmPassword = useRef('');
     return (
-        <div>
-            <form action="">
-                <input type="text" name="Name" placeholder='Name' id="" />
-                <input type="email" name="Email" placeholder='Email' id="" />
-                <input type="password" name="Password" id="" />
-                <input type="password" name="Confirm Password" id="" />
+        <div className='form-container'>
+            <form onSubmit={ } className='form'>
+                <input ref={refName} type="text" name="Name" placeholder='Name' id="" />
+                <br />
+                <input ref={refEmail} type="email" name="Email" placeholder='Email' id="" />
+                <br />
+                <input ref={refPassword} type="password" name="Password" placeholder='Password' id="" />
+                <br />
+                <input ref={refConfirmPassword} type="password" name="Confirm Password" placeholder='Confirm Password' id="" />
+                <br />
+                <div>
+                    <input type="submit" value="Sign Up" />
+                </div>
+                <p><Link to={'/signup'}></Link></p>
+                <div className='divider'>
+                    <div className='line-style'></div>
+                    <p>or</p>
+                    <div className='line-style'></div>
+                </div>
             </form>
         </div>
     );
