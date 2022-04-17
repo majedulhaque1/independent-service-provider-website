@@ -1,0 +1,11 @@
+.header-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../images/doctor1.jpg);
+    background-size: cover;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, orange, transparent);
+}

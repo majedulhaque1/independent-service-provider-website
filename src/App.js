@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Pages/Home/Header/Header';
 function App() {
   return (
     <div className="App">
-      <h2>This is independent service website</h2>
+      <Header></Header>
     </div>
   );
 }
