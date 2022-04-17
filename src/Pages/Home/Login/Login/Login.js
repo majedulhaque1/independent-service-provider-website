@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import './Login.css';
 import { Link } from 'react-router-dom';
+import './Login.css';
 const Login = () => {
     const refName = useRef('');
     const refEmail = useRef('');
@@ -8,7 +8,7 @@ const Login = () => {
     const refConfirmPassword = useRef('');
     return (
         <div className='form-container'>
-            <form onSubmit={ } className='form'>
+            <form className='form'>
                 <input ref={refName} type="text" name="Name" placeholder='Name' id="" />
                 <br />
                 <input ref={refEmail} type="email" name="Email" placeholder='Email' id="" />
@@ -20,7 +20,7 @@ const Login = () => {
                 <div>
                     <input type="submit" value="Sign Up" />
                 </div>
-                <p><Link to={'/signup'}></Link></p>
+                <p>New To website<Link to={'/signup'}>Create an account</Link></p>
                 <div className='divider'>
                     <div className='line-style'></div>
                     <p>or</p>

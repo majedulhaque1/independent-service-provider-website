@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
+    const refName = useRef('');
+    const refEmail = useRef('');
+    const refPassword = useRef('');
+    const refConfirmPassword = useRef('');
     return (
         <div>
             <div className='form-container'>
-            <form onSubmit={ } className='form'>
+            <form className='form'>
                 <input ref={refName} type="text" name="Name" placeholder='Name' id="" />
                 <br />
                 <input ref={refEmail} type="email" name="Email" placeholder='Email' id="" />
@@ -16,7 +21,7 @@ const SignUp = () => {
                 <div>
                     <input type="submit" value="Sign Up" />
                 </div>
-                <p><Link to={'/signup'}></Link></p>
+                <p>Already have an account<Link to={'/login'}>Please login</Link></p>
                 <div className='divider'>
                     <div className='line-style'></div>
                     <p>or</p>
