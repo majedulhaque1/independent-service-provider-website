@@ -14,6 +14,7 @@ const MainNavbar = () => {
                             <Nav.Link><Link to={'/'}>Home</Link></Nav.Link>
                             <Nav.Link><Link to={'/services'}>Services</Link></Nav.Link>
                             <Nav.Link><Link to={'/blogs'}>Blogs</Link></Nav.Link>
+                            <Nav.Link><Link to={'/reviews'}>Reviews</Link></Nav.Link>
                             <Nav.Link><Link to={'/aboutme'}>About Me</Link></Nav.Link>
                             <Nav.Link><Link to={'/login'}>Login</Link></Nav.Link>
                             <Nav.Link><Link to={'/signup'}>Sign Up</Link></Nav.Link>
