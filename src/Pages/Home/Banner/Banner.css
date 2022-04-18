@@ -1,7 +1,7 @@
 .banner{
     width: 100%;
     height: 80vh;
-    background-image: linear-gradient( to right, orange, rgba(0,0,0,0.6)), url(../../../images/doctor1.jpg);
+    background-image: linear-gradient( to right, rgb(0, 132, 255), rgba(0,0,0,0.6)), url(../../../images/doctor1.jpg);
     background-size: cover;
 }
 .banner-info{
@@ -15,13 +15,4 @@
 .banner-info h1{
     font-size: 70px;
     line-height: 80px;
-}
-.banner-info button{
-    background-color: #fff;
-    color: orange;
-    border: 0;
-    border-radius: 8px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 24px;
 }

@@ -38,17 +38,17 @@ const Login = () => {
                 <input ref={refPassword} type="password" name="Password" placeholder='Password' id="" />
                 <br />
                 <div>
-                    <input type="submit" value="Login" />
+                    <input className='btn-primary' type="submit" value="Login" />
                 </div>
                 <p>{errorMessege}</p>
-                <p>New To website<Link to={'/signup'}>Create an account</Link></p>
-                <button onClick={handleResetPass}>Reset password</button>
+                <p className='text-center'>New To website<Link to={'/signup'}>Create an account</Link></p>
+                <button className='btn btn-link d-block mx-auto w-100' onClick={handleResetPass}>Reset password</button>
                 <div className='divider'>
                     <div className='line-style'></div>
                     <p>or</p>
                     <div className='line-style'></div>
                 </div>
-                <button onClick={() => signInWithGoogle()}>Google Sign In</button>
+                <button className='btn btn-primary text-white w-100 d-block mt-4 mx-auto' onClick={() => signInWithGoogle()}>Google Sign In</button>
             </form>
         </div>
     );

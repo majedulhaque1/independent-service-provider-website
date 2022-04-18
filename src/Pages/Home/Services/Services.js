@@ -7,7 +7,7 @@ import Service from '../Service/Service';
 const Services = () => {
     const services = [
         { id: 1, servicesName: 'Oral Hygening', img: image1 },
-        { id: 2, servicesName: 'services name', img: image2 },
+        { id: 2, servicesName: 'Labratory Test', img: image2 },
         { id: 3, servicesName: 'Health and lifeStyle', img: image3 }
     ]
     return (

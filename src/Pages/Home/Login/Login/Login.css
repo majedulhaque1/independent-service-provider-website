@@ -14,3 +14,19 @@
     padding: 10px 20px;
     margin-bottom: 20px;
 }
+.divider{
+    width: 350px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.divider p{
+    margin-top: 10px;
+}
+.line-style{
+    width: 40%;
+    height: 3px;
+    background-color: #ddd;
+}

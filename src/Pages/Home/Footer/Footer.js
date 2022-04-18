@@ -5,21 +5,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <div className='footer' bg="primary">
             <div className='footer-container'>
                 <div className='menu'>
                     <h2>Menu</h2>
-                    <Link to={'/'}>Home</Link>
-                    <Link to={'/services'}>Services</Link>
-                    <Link to={'/reviews'}>Reviews</Link>
-                    <Link to={'/blogs'}>Blogs</Link>
-                    <Link to={'/aboutme'}>About Me</Link>
+                    <Link className='text-white text-decoration-none' to={'/'}>Home</Link>
+                    <Link className='text-white text-decoration-none' to={'/services'}>Services</Link>
+                    <Link className='text-white text-decoration-none' to={'/reviews'}>Reviews</Link>
+                    <Link className='text-white text-decoration-none' to={'/blogs'}>Blogs</Link>
+                    <Link className='text-white text-decoration-none' to={'/aboutme'}>About Me</Link>
                 </div>
                 <div className='services'>
                     <h2>Services</h2>
-                    <Link to={'/'}>Oral hyginen</Link>
-                    <Link to={'/'}>Health And life Style</Link>
-                    <Link to={'/'}>Headth</Link>
+                    <Link className='text-white text-decoration-none' to={'/'}>Oral hyginen</Link>
+                    <Link className='text-white text-decoration-none' to={'/'}>Health And life Style</Link>
+                    <Link className='text-white text-decoration-none' to={'/'}>Headth</Link>
                 </div>
                 <div className='social'>
                     <h2>Follow Me</h2>
@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <p></p>
+                <p className='text-center text-white'>copyright Majedul Haque Rakib</p>
             </div>
         </div>
     );

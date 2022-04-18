@@ -10,11 +10,7 @@ const Service = ({service}) => {
             <Card className='shadow-lg border-0' style={{ width: 'auto' }}>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
-                    <Card.Title>{servicesName}</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
+                    <Card.Title className='text-primary'>{servicesName}</Card.Title>
                     <Button onClick={() => navigate('/checkout')} variant="primary">Book Apointment</Button>
                 </Card.Body>
             </Card>
