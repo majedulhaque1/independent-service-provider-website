@@ -1,24 +1,34 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../../firebase.init';
 import './Login.css';
 const Login = () => {
-    const refName = useRef('');
     const refEmail = useRef('');
     const refPassword = useRef('');
-    const refConfirmPassword = useRef('');
+    const navigate = useNavigate();
+    const [signInWithEmailAndPassword, user] = useSignInWithEmailAndPassword(auth);
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || '/';
+    if(user){
+        navigate(from, {replace: true});
+    }
+    const handleSignIn = (event) =>{
+        event.preventDefault();
+        const email = refEmail.current.value;
+        const password = refPassword.current.value;
+        signInWithEmailAndPassword(email, password);
+    }
     return (
         <div className='form-container'>
-            <form className='form'>
-                <input ref={refName} type="text" name="Name" placeholder='Name' id="" />
-                <br />
+            <form onSubmit={handleSignIn} className='form'>
                 <input ref={refEmail} type="email" name="Email" placeholder='Email' id="" />
                 <br />
                 <input ref={refPassword} type="password" name="Password" placeholder='Password' id="" />
                 <br />
-                <input ref={refConfirmPassword} type="password" name="Confirm Password" placeholder='Confirm Password' id="" />
-                <br />
                 <div>
-                    <input type="submit" value="Sign Up" />
+                    <input type="submit" value="Login" />
                 </div>
                 <p>New To website<Link to={'/signup'}>Create an account</Link></p>
                 <div className='divider'>

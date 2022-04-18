@@ -1,15 +1,28 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import auth from '../../../../firebase.init';
 const SignUp = () => {
     const refName = useRef('');
     const refEmail = useRef('');
     const refPassword = useRef('');
     const refConfirmPassword = useRef('');
+    const navigate = useNavigate();
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
+    if(user){
+        navigate('/');
+    }
+    const handleSignUp = (event) =>{
+        event.preventDefault();
+        const name = refName.current.value;
+        const email = refEmail.current.value;
+        const password = refPassword.current.value;
+        createUserWithEmailAndPassword(email, password);
+    }
     return (
         <div>
             <div className='form-container'>
-            <form className='form'>
+            <form onSubmit={handleSignUp} className='form'>
                 <input ref={refName} type="text" name="Name" placeholder='Name' id="" />
                 <br />
                 <input ref={refEmail} type="email" name="Email" placeholder='Email' id="" />
