@@ -1,12 +1,14 @@
 import React from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
-import image1 from '../../../images/doctor1.jpg'
+import image1 from '../../../images/doctor1.jpg';
+import image2 from '../../../images/doctor2.jpg';
+import image3 from '../../../images/doctor3.jpg';
 import Service from '../Service/Service';
 const Services = () => {
     const services = [
-        { id: 1, servicesName: 'services name', img: image1 },
-        { id: 2, servicesName: 'services name', img: image1 },
-        { id: 3, servicesName: 'services name', img: image1 }
+        { id: 1, servicesName: 'Oral Hygening', img: image1 },
+        { id: 2, servicesName: 'services name', img: image2 },
+        { id: 3, servicesName: 'Health and lifeStyle', img: image3 }
     ]
     return (
         <div>

@@ -6,7 +6,6 @@ const Header = () => {
     return (
         <div className='header-container'>
             <MainNavbar></MainNavbar>
-            <Banner></Banner>
         </div>
     );
 };

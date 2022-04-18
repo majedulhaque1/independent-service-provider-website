@@ -8,18 +8,18 @@ import {signOut} from 'firebase/auth';
 const MainNavbar = () => {
     const [user] = useAuthState(auth);
     return (
-        <div>
-            <Navbar bg="" expand="lg">
+        <div className='custom-background-color'>
+            <Navbar className='custom-background-color sticky-top' bg="" expand="lg">
                 <Container>
-                    <Navbar.Brand>React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand>Well Madicare</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto">
-                            <Nav.Link><Link to={'/'}>Home</Link></Nav.Link>
-                            <Nav.Link><Link to={'/services'}>Services</Link></Nav.Link>
-                            <Nav.Link><Link to={'/blogs'}>Blogs</Link></Nav.Link>
-                            <Nav.Link><Link to={'/reviews'}>Reviews</Link></Nav.Link>
-                            <Nav.Link><Link to={'/aboutme'}>About Me</Link></Nav.Link>
+                        <Nav className="nav-items ms-auto">
+                            <Nav.Link ><Link className='link-style' to={'/'}>Home</Link></Nav.Link>
+                            <Nav.Link ><Link className='link-style' to={'/services'}>Services</Link></Nav.Link>
+                            <Nav.Link ><Link className='link-style' to={'/blogs'}>Blogs</Link></Nav.Link>
+                            <Nav.Link ><Link className='link-style' to={'/reviews'}>Reviews</Link></Nav.Link>
+                            <Nav.Link ><Link className='link-style' to={'/aboutme'}>About Me</Link></Nav.Link>
                             {user ? <button onClick={() => signOut(auth)}>Sign Out</button>
                             : <Nav.Link><Link to={'/login'}>Login</Link></Nav.Link>}
                             <Nav.Link><Link to={'/signup'}>Sign Up</Link></Nav.Link>

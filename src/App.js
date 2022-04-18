@@ -9,13 +9,14 @@ import Login from './Pages/Home/Login/Login/Login';
 import SignUp from './Pages/Home/Login/SignUp/SignUp';
 import RequireAuth from './Pages/Home/RequireAuth/RequireAuth';
 import CheckOut from './Pages/Home/CheckOut/CheckOut';
+import Footer from './Pages/Home/Footer/Footer';
+import Home from './Pages/Home/Home/Home';
 function App() {
   return (
     <div>
       <Header></Header>
       <Routes>
-        <Route path='/services' element={<Services></Services>}></Route>
-        <Route path='/reviews' element={<Reviews></Reviews>}></Route>
+        <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
@@ -25,6 +26,7 @@ function App() {
           </RequireAuth>
         }></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
